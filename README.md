@@ -1,2 +1,12 @@
 # online-quiz-platform
-Api written in Java Spring Boot
+
+## Plan
+Services & entities:
+user-service (SQL)
+    - User
+quiz-service (MongoDB)
+    - Quiz
+    - Question
+score-service (SQL)
+    - Score
+    - Leaderboard
