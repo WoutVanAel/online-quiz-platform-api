@@ -1,0 +1,30 @@
+services:
+  mysql-users:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql_user_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: abc123
+  
+  mongo-quizzes:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_quiz_data:/data/db
+
+  mysql-scores:
+    image: mysql:latest
+    ports:
+      - 3307:3306
+    volumes:
+      - mysql_score_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: abc123
+
+volumes:
+  mysql_user_data:
+  mongodb_quiz_data:
+  mysql_score_data:
